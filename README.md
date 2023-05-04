@@ -1,4 +1,4 @@
-# news_production_app
+# World News
 
 This project will not work unless you add your API key.
 - Create the file .env in project root
