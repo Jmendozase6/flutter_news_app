@@ -1,6 +1,8 @@
 # news_production_app
 
-A new Flutter project.
+This project will not work unless you add your API key.
+- Create the file .env in project root
+- add the key and call <NEWS_API>
 
 ## Getting Started
 
