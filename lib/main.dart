@@ -45,9 +45,7 @@ class MyApp extends StatelessWidget {
               ? HomeScreen.routeName
               : SplashScreen.routeName,
           routes: routes,
-          // theme: ThemeData(fontFamily: 'Poppins'),
           theme: AppTheme.lightTheme,
-          // darkTheme: ThemeData.dark(),
         );
         // );
       },
