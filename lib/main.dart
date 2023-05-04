@@ -4,7 +4,7 @@ import 'package:news_production_app/data/data_providers/filter_provider.dart';
 import 'package:news_production_app/logic/user_preferences.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:news_production_app/data/data_providers/data_providers.dart';
 import 'package:news_production_app/presentation/router/app_router.dart';
 import 'package:news_production_app/presentation/screens/screens.dart';
@@ -12,8 +12,8 @@ import 'presentation/screens/home_screen/widgets/search_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
   await UserPreferences.init();
-
   runApp(
     MultiProvider(
       providers: [

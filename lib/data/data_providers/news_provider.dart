@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:news_production_app/data/models/sort.dart';
@@ -6,7 +7,7 @@ import 'package:news_production_app/data/models/models.dart';
 
 const String _urlNews = 'https://newsapi.org/v2';
 // const String _originalApiKey = '9fb0f826564741d6baa70755ee32c98b'; // DO NOT MODIFIED
-const String _originalApiKey = 'dfec246bd80c47ba991bad03187e7fca';
+final String _originalApiKey = dotenv.get('NEWS_API', fallback: "");
 
 class NewsProvider extends ChangeNotifier {
   // List Save headlines
